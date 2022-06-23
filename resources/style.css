@@ -1,0 +1,99 @@
+/* Globals */
+* {
+    margin: 0;
+}
+
+body {
+    background-color: 353535;
+}
+
+.action-photo,
+.contact-photo {
+    width: 100px;
+}
+/* Typography */
+
+/* Colors */
+header a, h1 {
+    color: B38600;
+}
+
+/* Grid Container*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 8fr;
+    grid-template-areas:  
+        "header header header"
+        "landing landing landing";
+}
+
+header { grid-area: header;}
+
+main { grid-area: landing;}
+
+
+/* Real Grid */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "intro intro intro"
+        ". jwst jwst"
+        "about about about"
+        "tech tech tech"
+        "cont cont cont";
+        
+}
+
+.main-content { grid-area: intro; }
+.jwst { grid-area: jwst; }
+.about { grid-area: about; }
+.tech {grid-area: tech;}
+.contact { grid-area: cont; }
+
+
+@media only screen and (min-width: 860px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "intro intro jwst"
+            "about about about"
+            "tech tech tech"
+            "cont cont cont";
+            
+    }
+}
+
+
+
+/* Header */
+header {
+    margin: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Landing */
+
+.main-content {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1.5em;
+}
+
+.CTA {
+    display: flex;
+}
+
+.CTA h2 {
+    margin: 1em;
+}
+
+.jwst {
+    min-height: 300px;
+}
