@@ -5,17 +5,40 @@
 
 body {
     background-color: 353535;
+    /* background-image: linear-gradient(#353535 , #001266,#0020B3); */
 }
 
-.action-photo,
 .contact-photo {
     width: 100px;
 }
+
 /* Typography */
 
-/* Colors */
-header a, h1 {
-    color: B38600;
+h1, a {
+    font-family: 'Megrim', 'M Plus 1 Code', sans-serif;
+}
+
+h2, h3, p {
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+/* Colors and Weight*/
+header a, h1, p {
+    color: #B38600;
+}
+
+h2 {
+    color: #DADADA;
+    font-weight: 300;
+}
+
+h3 {
+    color: #FFBF00;
+    font-weight: 400;
+}
+
+a {
+    font-weight: 700;
 }
 
 /* Grid Container*/
@@ -55,23 +78,12 @@ main {
 .contact { grid-area: cont; }
 
 
-@media only screen and (min-width: 860px) {
-    main {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "intro intro jwst"
-            "about about about"
-            "tech tech tech"
-            "cont cont cont";
-            
-    }
-}
 
 
 
 /* Header */
 header {
-    margin: 1.5em;
+    margin: 1.5em 2em;
     display: flex;
     justify-content: space-between;
 }
@@ -83,7 +95,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 1.5em;
+    margin: 1.5em 2em;
 }
 
 .CTA {
@@ -91,9 +103,93 @@ header {
 }
 
 .CTA h2 {
-    margin: 1em;
+    margin: 1em 1em 0 0;
+    background: #FFBF00;
+    box-shadow: 1.96237px 1.96237px 5.3965px 1.96237px rgba(0, 0, 0, 0.25);
+    width: 120px;
+    height: 34.34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.jwst {
-    min-height: 300px;
+.CTA a {
+    color: rgba(0, 0, 0, 0.64);
+}
+
+/* About Me */
+
+.about {
+    margin: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr, 2fr;
+    grid-template-areas: 
+        "about-title about-title"
+        "action-photo about-description"
+        "social about-description";
+}
+
+.about h1 { 
+    grid-area: about-title;
+    min-width: fit-content;
+    margin-bottom: 1em;
+}
+
+.about-description { 
+    grid-area: about-description;
+    min-width: 200px;
+    margin-left: 2em;
+}
+
+.about-description h2,
+.about-description h3,
+.about-description p {
+    margin-bottom: .5em;
+    line-height: 1.5em;
+}
+
+
+
+.action-photo { 
+    grid-area: action-photo;
+    object-fit: cover;
+    object-position: 0%;
+    max-width: 100px;
+    min-height: 250px;
+    border: 1.25436px solid #FFBF00;
+    filter: drop-shadow(1.67247px 1.67247px 2.50871px rgba(0, 0, 0, 0.57));
+    align-self: center;
+}
+
+.social {
+    grid-area: social;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+
+.social i {
+    font-size: 32px;
+}
+
+
+/* Larger Screens */
+
+@media only screen and (min-width: 650px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "intro intro jwst"
+            "about about about"
+            "tech tech tech"
+            "cont cont cont";
+
+    }
+
+    .about {
+        grid-template-areas: 
+            "about-title about-title"
+            "action-photo about-description"
+            "action-photo social";
+    }
 }
