@@ -88,10 +88,14 @@ header {
     justify-content: space-between;
 }
 
+header a {
+    text-decoration: none;
+}
+
 /* Landing */
 
 .main-content {
-    min-height: 300px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,20 +106,55 @@ header {
     display: flex;
 }
 
-.CTA h2 {
+.CTA button {
+    font-family: 'Megrim', 'M Plus 1 Code', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
     margin: 1em 1em 0 0;
     background: #FFBF00;
+    border: none;
     box-shadow: 1.96237px 1.96237px 5.3965px 1.96237px rgba(0, 0, 0, 0.25);
     width: 120px;
     height: 34.34px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    position: relative;
+}
+
+button:after {
+    content: "";
+    background: #B38600;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
 
 .CTA a {
     color: rgba(0, 0, 0, 0.64);
+    text-decoration: none;
 }
+
+/* .CTA button:hover,
+.CTA button:focus{
+    background-color: #B38600;
+} */
+
 
 /* About Me */
 
@@ -169,9 +208,37 @@ header {
 }
 
 .social i {
-    font-size: 32px;
+    font-size: 38px;
+    color: #B38600;
 }
 
+.social i:hover,
+.social i:focus {
+    color: #FFBF00;
+}
+
+/* Tech */
+
+.tech h1 {
+    margin: 1em;
+}
+
+
+.tech-icons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2em 0;
+}
+
+.tech-icons i {
+    color: #B38600;
+    font-size: 48;
+}
+
+.tech-icons i:hover,
+.tech-icons i:focus {
+    color: #FFBF00;
+}
 
 /* Larger Screens */
 
