@@ -16,19 +16,25 @@
     <script src="mobileNavFeature.js"></script>
 
 </head>
+
+
 <body class="container">
     <header>
         <!-- BC<> Full-Stack Title don't freak out -->
         <h1 id="title"><a href="#">B.C.&#60&#62 <br>Full-Stack</a></h1>
-        <!-- Sticky Navagation -->
-        <nav id="navContainer">
-            <ul id="navBar">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Tech</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+        <!-- Navagation -->
+        <nav id="myNav" class="nav-overlay">
+            <!-- close Button -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <!-- Nav Content -->
+            <ul class="overlay-content">
+                <li><a href="#about" class="ripple" onclick="closeNav()">About</a></li>
+                <li><a href="#tech" class="ripple" onclick="closeNav()">Tech</a></li>
+                <li><a href="#portfolio" class="ripple" onclick="closeNav()">Portfolio</a></li>
+                <li><a href="#contact" class="ripple" onclick="closeNav()">Contact</a></li>
             </ul>
         </nav>
+        <i class="fa-solid fa-bars" onclick="openNav()"></i>
     </header>
     
     <main>
@@ -36,19 +42,13 @@
         <section class="main-content">
             <h1>&#60Hello World&#62 <br>I am Blaise Chauvin <br>Full-Stack Developer</h1>
             <form class="CTA">
-                <a href="#"><button>Hire</button></a>
-                <a href="#"><button>Portfolio</button></a>
+                <a href="#contact" class="ripple">Hire</a>
+                <!-- <a href="#" class="ripple">Portfolio</a> -->
             </form>
         </section>
 
-        <!-- Cool Shapes coughcough jwst**-->
-        <!-- <section class="jwst">
-            <h2>JWST HERE</h2>
-            <div class="top" id="hexagon"></div>
-        </section> -->
-
         <!-- About Me -->
-        <section class="about">
+        <section id="about" class="about">
             <h1>&#60About Me&#62</h1>
             <!-- Action Shot -->
             <img class="action-photo" src="resources/26910154_1870619866303946_2172071280110598560_o.jpg" alt="Action Photo of Blaise Chauvin">
@@ -63,14 +63,14 @@
 
             <!-- Linked-In, Git-Hub links. Codecademy?-->
             <div class="social">
-                <i class="devicon-github-original"></i>
-                <i class="devicon-linkedin-plain"></i>
+                <a href="https://github.com/BlaiseChauvin" target="_blank"><i class="devicon-github-original"></i></a>
+                <a href="https://www.linkedin.com/in/blaise-chauvin-452008215/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
             </div>
 
         </section>
         
         <!-- Tech -->
-        <section class="tech">
+        <section id="tech" class="tech">
             <h1>&#60Tech&#62</h1>
             <div class="tech-icons">
                 <i class="devicon-html5-plain"></i>
@@ -88,7 +88,7 @@
             </section> -->
 
         <!-- Contact -->
-        <section class="contact">
+        <section id="contact" class="contact">
             <h1>&#60Contact&#62</h1>
             <img class="contact-photo" src="resources/hands-1947915_960_720.jpg" alt="Contact Form Image">
             <!-- Form here -->
@@ -97,9 +97,9 @@
         <footer>
             <nav id="footer-nav">
                 <ul>
-                    <li><a href="#" class="ripple">Tech</a></li>
-                    <li><a href="#" class="ripple">Portfolio</a></li>
-                    <li><a href="#" class="ripple">Contact</a></li>
+                    <li><a href="#tech" class="ripple">Tech</a></li>
+                    <li><a href="#portfolio" class="ripple">Portfolio</a></li>
+                    <li><a href="#contact" class="ripple">Hire</a></li>
                 </ul>
             </nav>
         </footer>

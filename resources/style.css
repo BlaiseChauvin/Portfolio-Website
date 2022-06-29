@@ -32,7 +32,7 @@ body {
   }
 
 
-  
+
 
 /* Typography */
 
@@ -64,27 +64,6 @@ a {
 }
 
 
-
-
-/* Grid Container*/
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 8fr;
-    grid-template-areas:  
-        "header header header"
-        "landing landing landing";
-}
-
-header { grid-area: header;}
-
-main { grid-area: landing;}
-
-
-
-
-
 /* Real Grid */
 
 main {
@@ -92,7 +71,6 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
         "intro intro intro"
-        ". jwst jwst"
         "about about about"
         "tech tech tech"
         "cont cont cont";
@@ -100,7 +78,6 @@ main {
 }
 
 .main-content { grid-area: intro; }
-.jwst { grid-area: jwst; }
 .about { grid-area: about; }
 .tech {grid-area: tech;}
 .contact { grid-area: cont; }
@@ -112,18 +89,90 @@ main {
 /* Header */
 
 header {
-    margin: 1.5em 2em;
+    padding: 1.5em 2em;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    background-color: #353535ea;
+    top: 0;
+    z-index: 1;
 }
+
+header i {
+    font-size: 48px;
+    cursor: pointer;
+    margin-right: 60px;
+    color: #B38600;
+}
+
+header i:hover,
+header i:active,
+#title a:hover,
+#title a:active{
+    color: #FFBF00;
+}
+
+
+
+.nav-overlay {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 18%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.nav-overlay a {
+    padding: 30px;
+    font-size: 36px;
+    display: block;
+    transition: 0.3s;
+  }
+
+.nav-overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.nav-overlay a:hover, 
+.nav-overlay a:focus {
+    color: black;
+    background-color: #FFBF00;
+  }
+
+@media screen and (max-height: 450px) {
+    .nav-overlay a {
+        font-size: 20px
+    }
+    .nav-overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
 
 
 
 /* Landing */
 
 .main-content {
-    min-height: 400px;
+    min-height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,53 +183,24 @@ header {
     display: flex;
 }
 
-.CTA button {
+.CTA a {
     font-family: 'Megrim', 'M Plus 1 Code', sans-serif;
     font-size: 24px;
     font-weight: 600;
     cursor: pointer;
     margin: 1em 1em 0 0;
-    background: #FFBF00;
-    border: none;
+    background: #B38600;
     box-shadow: 1.96237px 1.96237px 5.3965px 1.96237px rgba(0, 0, 0, 0.25);
     width: 120px;
     height: 34.34px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-duration: 0.4s;
-    overflow: hidden;
-    position: relative;
-}
-
-button:after {
-    content: "";
-    background: #FFBF00;
-    display: block;
-    position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px !important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 0.8s
-}
-
-button:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
-}
-
-.CTA a {
     color: rgba(0, 0, 0, 0.64);
-    text-decoration: none;
 }
 
-.CTA button:hover,
-.CTA button:focus{
-    background-color: #B38600;
+.CTA a:hover {
+    background-color: #FFBF00;
 }
 
 
@@ -272,7 +292,6 @@ button:active:after {
 /* Fixed footer with nav for mobile */
 
 footer {
-    background-color: #DADADA;
     position: fixed;
     bottom: 0;
     width: 100%;
