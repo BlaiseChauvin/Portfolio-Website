@@ -11,14 +11,18 @@
     <link rel="stylesheet" href="resources/style.css">
     <!-- Dev Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <!-- Menu Bars -->
+    <script src="https://kit.fontawesome.com/2a8b62a9c7.js" crossorigin="anonymous"></script>
+    <script src="mobileNavFeature.js"></script>
+
 </head>
 <body class="container">
     <header>
         <!-- BC<> Full-Stack Title don't freak out -->
         <h1 id="title"><a href="#">B.C.&#60&#62 <br>Full-Stack</a></h1>
         <!-- Sticky Navagation -->
-        <nav>
-            <ul>
+        <nav id="navContainer">
+            <ul id="navBar">
                 <li><a href="#">About</a></li>
                 <li><a href="#">Tech</a></li>
                 <li><a href="#">Portfolio</a></li>
@@ -90,6 +94,15 @@
             <!-- Form here -->
         </section>
         <!-- Footer -->
+        <footer>
+            <nav id="footer-nav">
+                <ul>
+                    <li><a href="#" class="ripple">Tech</a></li>
+                    <li><a href="#" class="ripple">Portfolio</a></li>
+                    <li><a href="#" class="ripple">Contact</a></li>
+                </ul>
+            </nav>
+        </footer>
     </main>
 </body>
 </html>

@@ -1,6 +1,9 @@
 /* Globals */
+
 * {
     margin: 0;
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
@@ -11,6 +14,25 @@ body {
 .contact-photo {
     width: 100px;
 }
+
+
+
+/* Ripple effect */
+.ripple {
+    background-position: center;
+    transition: background 0.6s;
+  }
+  .ripple:hover {
+    background: #B38600 radial-gradient(circle, transparent 1%, #B38600 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: #FFBF00;
+    background-size: 100%;
+    transition: background 0s;
+  }
+
+
+  
 
 /* Typography */
 
@@ -41,6 +63,9 @@ a {
     font-weight: 700;
 }
 
+
+
+
 /* Grid Container*/
 
 .container {
@@ -55,6 +80,9 @@ a {
 header { grid-area: header;}
 
 main { grid-area: landing;}
+
+
+
 
 
 /* Real Grid */
@@ -82,15 +110,15 @@ main {
 
 
 /* Header */
+
 header {
     margin: 1.5em 2em;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
-header a {
-    text-decoration: none;
-}
+
 
 /* Landing */
 
@@ -127,7 +155,7 @@ header a {
 
 button:after {
     content: "";
-    background: #B38600;
+    background: #FFBF00;
     display: block;
     position: absolute;
     padding-top: 300%;
@@ -150,10 +178,10 @@ button:active:after {
     text-decoration: none;
 }
 
-/* .CTA button:hover,
+.CTA button:hover,
 .CTA button:focus{
     background-color: #B38600;
-} */
+}
 
 
 /* About Me */
@@ -232,13 +260,47 @@ button:active:after {
 
 .tech-icons i {
     color: #B38600;
-    font-size: 48;
+    font-size: 48px;
 }
 
 .tech-icons i:hover,
 .tech-icons i:focus {
     color: #FFBF00;
 }
+
+
+/* Fixed footer with nav for mobile */
+
+footer {
+    background-color: #DADADA;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#footer-nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    background-color: #B38600;
+    padding: 0;
+}
+
+
+#footer-nav a {
+    display: block;
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px 20px;
+}
+
+#footer-nav a:hover {
+    background-color: #FFBF00;
+}
+
 
 /* Larger Screens */
 
