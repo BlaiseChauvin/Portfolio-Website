@@ -11,9 +11,6 @@ body {
     /* background-image: linear-gradient(#353535 , #001266,#0020B3); */
 }
 
-.contact-photo {
-    width: 100px;
-}
 
 
 
@@ -49,6 +46,14 @@ header a, h1, p {
     color: #B38600;
 }
 
+
+.about h1,
+.tech h1,
+.contact h1 {
+    font-size: 2em;
+}
+
+
 h2 {
     color: #DADADA;
     font-weight: 300;
@@ -61,6 +66,7 @@ h3 {
 
 a {
     font-weight: 700;
+    scroll-behavior: smooth;
 }
 
 
@@ -97,12 +103,14 @@ header {
     background-color: #353535ea;
     top: 0;
     z-index: 1;
+    box-shadow: 1.96237px 1.96237px 5.3965px 1.96237px rgba(0, 0, 0, 0.25);
 }
 
 header i {
     font-size: 48px;
     cursor: pointer;
     margin-right: 60px;
+    margin-top: 12px;
     color: #B38600;
 }
 
@@ -179,25 +187,34 @@ header i:active,
     margin: 1.5em 2em;
 }
 
+.main-content span {
+    font-size: 1.5em;
+    color: #FFBF00;
+}
+
+
 .CTA {
     display: flex;
+    flex-direction: row;
+    margin: 1em 0;
 }
 
 .CTA a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: 'Megrim', 'M Plus 1 Code', sans-serif;
     font-size: 24px;
     font-weight: 600;
+    color: rgba(0, 0, 0, 0.64);
+    min-width: 120px;
+    min-height: 34.34px;
     cursor: pointer;
     margin: 1em 1em 0 0;
     background: #B38600;
     box-shadow: 1.96237px 1.96237px 5.3965px 1.96237px rgba(0, 0, 0, 0.25);
-    width: 120px;
-    height: 34.34px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(0, 0, 0, 0.64);
 }
+    
 
 .CTA a:hover {
     background-color: #FFBF00;
@@ -275,7 +292,7 @@ header i:active,
 .tech-icons {
     display: flex;
     justify-content: space-evenly;
-    margin: 2em 0;
+    margin: 4em 0;
 }
 
 .tech-icons i {
@@ -289,13 +306,77 @@ header i:active,
 }
 
 
+/* Contact */
+
+.contact {
+    min-height: 600px;
+}
+
+.contact h1 {
+    margin: 1em;
+}
+
+.contact-photo {
+    width: 100px;
+    display: none;
+}
+
+
+form {
+    margin: 3em 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    color: #B38600;
+    font-size: 1.5em;
+    font-family: 'Megrim', 'M Plus 1 Code', sans-serif;
+    font-size: 2em;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 1em 2em 1em 0;
+    font-family: 'M Plus 1 Code', sans-serif;
+    font-size: 1.2em;
+    border: none;
+}
+
+#form-description {
+    min-height: 200px;
+    width: 100%;
+    font-size: 1.2em;
+    font-family: 'M Plus 1 Code', sans-serif;
+    padding: 12px 20px;
+    margin-top: 1em;
+    border: none;
+}
+
+input[type=submit] {
+    background-color: #B38600;
+    font-family: 'Megrim', 'M Plus 1 Code', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    width: 40%;
+    min-height: 50px;
+    align-self: center;
+    margin: 2em 0;
+    cursor: pointer;
+    box-shadow: 1.96237px 1.96237px 5.3965px 1.96237px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.64);
+    border: none;
+}
+
+
+
 /* Fixed footer with nav for mobile */
 
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    overflow: hidden;
 }
 
 #footer-nav ul {
@@ -321,6 +402,10 @@ footer {
 }
 
 
+
+
+
+
 /* Larger Screens */
 
 @media only screen and (min-width: 650px) {
@@ -340,4 +425,8 @@ footer {
             "action-photo about-description"
             "action-photo social";
     }
+
+
+    /* Sizing */
+    
 }

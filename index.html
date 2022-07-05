@@ -30,7 +30,7 @@
             <ul class="overlay-content">
                 <li><a href="#about" class="ripple" onclick="closeNav()">About</a></li>
                 <li><a href="#tech" class="ripple" onclick="closeNav()">Tech</a></li>
-                <li><a href="#portfolio" class="ripple" onclick="closeNav()">Portfolio</a></li>
+                <!-- <li><a href="#portfolio" class="ripple" onclick="closeNav()">Portfolio</a></li> -->
                 <li><a href="#contact" class="ripple" onclick="closeNav()">Contact</a></li>
             </ul>
         </nav>
@@ -40,10 +40,10 @@
     <main>
         <!-- Landing/CTA -->
         <section class="main-content">
-            <h1>&#60Hello World&#62 <br>I am Blaise Chauvin <br>Full-Stack Developer</h1>
+            <h1>&#60Hello World&#62 <br>I am<span> Blaise Chauvin </span><br>Full-Stack Developer</h1>
             <form class="CTA">
-                <a href="#contact" class="ripple">Hire</a>
-                <!-- <a href="#" class="ripple">Portfolio</a> -->
+                <a href="#contact" class="ripple">Contact</a>
+                <!-- <a href="#portfolio" class="ripple">Portfolio</a> -->
             </form>
         </section>
 
@@ -62,13 +62,13 @@
             </div>
 
             <!-- Linked-In, Git-Hub links. Codecademy?-->
-            <div class="social">
+            <div class="social" id="tech-anchor">
                 <a href="https://github.com/BlaiseChauvin" target="_blank"><i class="devicon-github-original"></i></a>
                 <a href="https://www.linkedin.com/in/blaise-chauvin-452008215/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
             </div>
 
         </section>
-        
+
         <!-- Tech -->
         <section id="tech" class="tech">
             <h1>&#60Tech&#62</h1>
@@ -92,14 +92,29 @@
             <h1>&#60Contact&#62</h1>
             <img class="contact-photo" src="resources/hands-1947915_960_720.jpg" alt="Contact Form Image">
             <!-- Form here -->
+            <form action="<!--/file.js-->">
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" value="">
+                </div>
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email" value="">
+                </div>
+                <div>
+                    <label for="form-description">Description:</label><br>
+                    <textarea name="form-description" id="form-description" cols="30" rows="10"></textarea>
+                </div>
+                <input type="submit" value="Send" class="ripple">
+            </form>
         </section>
         <!-- Footer -->
         <footer>
             <nav id="footer-nav">
                 <ul>
-                    <li><a href="#tech" class="ripple">Tech</a></li>
-                    <li><a href="#portfolio" class="ripple">Portfolio</a></li>
-                    <li><a href="#contact" class="ripple">Hire</a></li>
+                    <li><a href="#tech-anchor" class="ripple">Tech</a></li>
+                    <!-- <li><a href="#portfolio" class="ripple">Portfolio</a></li> -->
+                    <li><a href="#contact" class="ripple">Contact</a></li>
                 </ul>
             </nav>
         </footer>
