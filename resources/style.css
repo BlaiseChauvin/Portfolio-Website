@@ -4,6 +4,7 @@
     margin: 0;
     text-decoration: none;
     list-style: none;
+    transition: 0.3s;
 }
 
 body {
@@ -100,10 +101,10 @@ header {
     justify-content: space-between;
     position: fixed;
     width: 100%;
-    background-color: #353535ea;
+    background-color: #353535fa;
     top: 0;
     z-index: 1;
-    box-shadow: 1.96237px 1.96237px 5.3965px 1.96237px rgba(0, 0, 0, 0.25);
+    box-shadow: 1.96237px 1.96237px 5.3965px 1.96237px rgba(179, 134, 0, 0.7);
 }
 
 header i {
@@ -320,17 +321,17 @@ header i:active,
 
 /* Contact */
 
+#contact-anchor{
+    position: relative;
+    bottom: 7em;
+}
+
 .contact {
     min-height: 600px;
 }
 
 .contact h1 {
     margin: 1em;
-}
-
-.contact-photo {
-    width: 100px;
-    display: none;
 }
 
 
@@ -364,6 +365,7 @@ input[type=text] {
     padding: 12px 20px;
     margin-top: 1em;
     border: none;
+    resize: none;
 }
 
 input[type=submit] {
@@ -420,7 +422,7 @@ footer {
 
 /* Larger Screens */
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 700px) {
     main {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
@@ -440,5 +442,120 @@ footer {
 
 
     /* Sizing */
+    .main-content {
+        font-size: 24px;
+        min-height: 90vh;
+    }
+
+    .about h2, 
+    .about h3 {
+        font-size: 24px;
+    }
+
+    .about p {
+        font-size: 20px;
+    }
+
+    .action-photo {
+        max-width: 150px;
+        min-height: 400px;
+    }
+
+    .social i {
+        font-size: 64;
+    }
+
+    .tech-icons i {
+        margin: 1em 0 2em 0;
+        font-size: 64px;
+    }
+
+    .contact form {
+        padding: 0 4em;
+    }
+
+    .contact {
+        min-height: 1000px;
+    }
+
+    input[type=text],
+    #form-description {
+        font-size: 32px;
+    }
+    
+
+    input[type=submit] {
+        min-height: 100px;
+        font-size: 32px;
+    }
+
+    #footer-nav {
+        display: none;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    /* Sizing */
+    .main-content,
+    .about {
+        margin: 0 4em;
+    }
+
+    .overlay-content a {
+        font-size: 64px;
+    }
+
+    .nav-overlay .closebtn {
+        font-size: 84px;
+    }
+
+    .main-content h1 {
+        font-size: 64px;
+        margin-top: 4em;
+    }
+
+    .CTA a {
+        min-width: 240px;
+        min-height: 70px;
+        font-size: 32px;
+    }
+
+    .about h1,
+    .tech h1,
+    .contact h1 {
+        font-size: 48px;
+    }
+
+    .about h2, 
+    .about h3 {
+        font-size: 32px;
+        word-spacing: 0.3em;
+        line-height: 3em;
+    }
+
+    .about p {
+        font-size: 28px;
+        word-spacing: 0.3em;
+        line-height: 2em;
+    }
+
+    .about-description {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .action-photo {
+        max-width: 300px;
+        min-height: 700px;
+    }
+
+    .social i {
+        font-size: 84px;
+    }
+
+    .tech-icons i {
+        font-size: 84px;
+    }
 
 }
