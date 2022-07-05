@@ -1,123 +1,124 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BC Full-Stack</title>
-    <!-- Typography -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BC Full-Stack</title>
+        <!-- Typography -->
 
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100;300;400;700&family=Megrim&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="resources/style.css">
-    <!-- Dev Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <!-- Menu Bars -->
-    <script src="https://kit.fontawesome.com/2a8b62a9c7.js" crossorigin="anonymous"></script>
-    <script src="mobileNavFeature.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100;300;400;700&family=Megrim&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="resources/style.css">
+        <!-- Dev Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+        <!-- Menu Bars -->
+        <script src="https://kit.fontawesome.com/2a8b62a9c7.js" crossorigin="anonymous"></script>
+        <script src="mobileNavFeature.js"></script>
 
-</head>
+    </head>
 
 
-<body class="container">
-    <header>
-        <!-- BC<> Full-Stack Title don't freak out -->
-        <h1 id="title"><a href="#">B.C.&#60&#62 <br>Full-Stack</a></h1>
-        <!-- Navagation -->
-        <nav id="myNav" class="nav-overlay">
-            <!-- close Button -->
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <!-- Nav Content -->
-            <ul class="overlay-content">
-                <li><a href="#about" class="ripple" onclick="closeNav()">About</a></li>
-                <li><a href="#tech" class="ripple" onclick="closeNav()">Tech</a></li>
-                <!-- <li><a href="#portfolio" class="ripple" onclick="closeNav()">Portfolio</a></li> -->
-                <li><a href="#contact" class="ripple" onclick="closeNav()">Contact</a></li>
-            </ul>
-        </nav>
-        <i class="fa-solid fa-bars" onclick="openNav()"></i>
-    </header>
-    
-    <main>
-        <!-- Landing/CTA -->
-        <section class="main-content">
-            <h1>&#60Hello World&#62 <br>I am<span> Blaise Chauvin </span><br>Full-Stack Developer</h1>
-            <form class="CTA">
-                <a href="#contact" class="ripple">Contact</a>
-                <!-- <a href="#portfolio" class="ripple">Portfolio</a> -->
-            </form>
-        </section>
-
-        <!-- About Me -->
-        <section id="about" class="about">
-            <h1>&#60About Me&#62</h1>
-            <!-- Action Shot -->
-            <img class="action-photo" src="resources/26910154_1870619866303946_2172071280110598560_o.jpg" alt="Action Photo of Blaise Chauvin">
-            <!-- Description -->
-            <div class="about-description">
-                <h2>Who am I?</h2>
-                <h3>Hey there, I am Blaise Chauvin.  Passionate full-stack engineer for web and mobile applications!</h3>
-                <p>I love making beautiful and semantic code using established technologies to solve different problems 
-                    in both industry and at home.  Take a look at my portfolio work, and let's see if we can make 
-                    something beautiful together!</p>
-            </div>
-
-            <!-- Linked-In, Git-Hub links. Codecademy?-->
-            <div class="social" id="tech-anchor">
-                <a href="https://github.com/BlaiseChauvin" target="_blank"><i class="devicon-github-original"></i></a>
-                <a href="https://www.linkedin.com/in/blaise-chauvin-452008215/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
-            </div>
-
-        </section>
-
-        <!-- Tech -->
-        <section id="tech" class="tech">
-            <h1>&#60Tech&#62</h1>
-            <div class="tech-icons">
-                <i class="devicon-html5-plain"></i>
-                <i class="devicon-css3-plain"></i>
-                <i class="devicon-javascript-plain"></i>
-                <i class="devicon-nodejs-plain-wordmark"></i>
-            </div>
-        </section>
-
-        <!-- Portfolio Here -->
-        <!-- <section>
-            &#60Portfolio&#62
-            Portfolio Hero Here
-            Portfolio Side Cards Here
-            </section> -->
-
-        <!-- Contact -->
-        <section id="contact" class="contact">
-            <h1>&#60Contact&#62</h1>
-            <img class="contact-photo" src="resources/hands-1947915_960_720.jpg" alt="Contact Form Image">
-            <!-- Form here -->
-            <form action="<!--/file.js-->">
-                <div>
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" value="">
-                </div>
-                <div>
-                    <label for="email">Email:</label><br>
-                    <input type="text" id="email" name="email" value="">
-                </div>
-                <div>
-                    <label for="form-description">Description:</label><br>
-                    <textarea name="form-description" id="form-description" cols="30" rows="10"></textarea>
-                </div>
-                <input type="submit" value="Send" class="ripple">
-            </form>
-        </section>
-        <!-- Footer -->
-        <footer>
-            <nav id="footer-nav">
-                <ul>
-                    <li><a href="#tech-anchor" class="ripple">Tech</a></li>
-                    <!-- <li><a href="#portfolio" class="ripple">Portfolio</a></li> -->
-                    <li><a href="#contact" class="ripple">Contact</a></li>
+    <body class="container">
+        <header>
+            <!-- BC<> Full-Stack Title don't freak out -->
+            <h1 id="title"><a href="#">B.C.&#60&#62 <br>Full-Stack</a></h1>
+            <!-- Navagation -->
+            <nav id="myNav" class="nav-overlay">
+                <!-- close Button -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <!-- Nav Content -->
+                <ul class="overlay-content">
+                    <li><a href="#about-anchor" class="ripple" onclick="closeNav()">About</a></li>
+                    <li><a href="#tech-anchor" class="ripple" onclick="closeNav()">Tech</a></li>
+                    <!-- <li><a href="#portfolio" class="ripple" onclick="closeNav()">Portfolio</a></li> -->
+                    <li><a href="#contact" class="ripple" onclick="closeNav()">Contact</a></li>
                 </ul>
             </nav>
-        </footer>
-    </main>
-</body>
+            <i class="fa-solid fa-bars" onclick="openNav()"></i>
+        </header>
+        
+        <main>
+            <!-- Landing/CTA -->
+            <section class="main-content">
+                <h1>&#60Hello World&#62 <br>I am<span> Blaise Chauvin </span><br>Full-Stack Developer</h1>
+                <form class="CTA">
+                    <a href="#contact" class="ripple">Contact</a>
+                    <!-- <a href="#portfolio" class="ripple">Portfolio</a> -->
+                </form>
+                <a id="about-anchor"></a>
+            </section>
+
+            <!-- About Me -->
+            <section id="about" class="about">
+                <h1>&#60About Me&#62</h1>
+                <!-- Action Shot -->
+                <img class="action-photo" src="resources/26910154_1870619866303946_2172071280110598560_o.jpg" alt="Action Photo of Blaise Chauvin">
+                <!-- Description -->
+                <div class="about-description">
+                    <h2>Who am I?</h2>
+                    <h3>Hey there, I am Blaise Chauvin.  Passionate full-stack engineer for web and mobile applications!</h3>
+                    <p>I love making beautiful and semantic code using established technologies to solve different problems 
+                        in both industry and at home.  Take a look at my portfolio work, and let's see if we can make 
+                        something beautiful together!</p>
+                </div>
+                <a id="tech-anchor"></a>
+                <!-- Linked-In, Git-Hub links. Codecademy?-->
+                <div class="social">
+                    <a href="https://github.com/BlaiseChauvin" target="_blank"><i class="devicon-github-original"></i></a>
+                    <a href="https://www.linkedin.com/in/blaise-chauvin-452008215/" target="_blank"><i class="devicon-linkedin-plain"></i></a>
+                </div>
+
+            </section>
+
+            <!-- Tech -->
+            <section id="tech" class="tech">
+                <h1>&#60Tech&#62</h1>
+                <div class="tech-icons">
+                    <i class="devicon-html5-plain"></i>
+                    <i class="devicon-css3-plain"></i>
+                    <i class="devicon-javascript-plain"></i>
+                    <i class="devicon-nodejs-plain-wordmark"></i>
+                </div>
+            </section>
+
+            <!-- Portfolio Here -->
+            <!-- <section>
+                &#60Portfolio&#62
+                Portfolio Hero Here
+                Portfolio Side Cards Here
+                </section> -->
+
+            <!-- Contact -->
+            <section id="contact" class="contact">
+                <h1>&#60Contact&#62</h1>
+                <img class="contact-photo" src="resources/hands-1947915_960_720.jpg" alt="Contact Form Image">
+                <!-- Form here -->
+                <form action="<!--/file.js-->">
+                    <div>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" value="">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label><br>
+                        <input type="text" id="email" name="email" value="">
+                    </div>
+                    <div>
+                        <label for="form-description">Description:</label><br>
+                        <textarea name="form-description" id="form-description" cols="30" rows="10"></textarea>
+                    </div>
+                    <input type="submit" value="Send" class="ripple">
+                </form>
+            </section>
+            <!-- Footer -->
+            <footer>
+                <nav id="footer-nav">
+                    <ul>
+                        <li><a href="#tech-anchor" class="ripple">Tech</a></li>
+                        <!-- <li><a href="#portfolio" class="ripple">Portfolio</a></li> -->
+                        <li><a href="#contact" class="ripple">Contact</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </main>
+    </body>
 </html>
